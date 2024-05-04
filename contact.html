@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-       body {
-            font-family:cursive;
-            line-height: 2;
-        }
-        
-        section.contact-container {
+        .contact-container {
             max-width: 800px;
             margin: 20px auto;
             background-color: #fff;
@@ -20,7 +17,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        section.contact-container h2 {
+        .contact-container h2 {
             color: #333;
             margin-bottom: 20px;
         }
@@ -41,56 +38,67 @@
 
         .google-map {
             text-align: center;
+            margin-bottom: 20px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+        .google-map iframe {
             width: 100%;
-        }
-
-        footer p {
-            margin: 0;
+            height: 300px;
         }
 
 
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 10px;
+            }
+
+            .google-map iframe {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div>
-        <header>
-            <div id="logo-name" style="display: flex; align-items: center;">
-                <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 150px; height: 150px;">
-                <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: beige; font-size: 60px; text-align: center;">
-                    Shahanj Construction Company Pvt Ltd
-                </h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 70px; height: 70px;">
+            <a style="font-size: 40px;" class="navbar-brand" href="index.html">Shahanj Construction Pvt. Ltd. </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="service.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
             </div>
-            
-        </header>
-        <nav style="background-color: crimson;">
-            <ul>
-                <li style="font-size: 40px; margin-left: 40px;"><a href="index.html">Home</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="about.html">About us</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="service.html">Our Services</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="contact.html">Contact</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="gallery.html">Gallery</a></li>
-            </ul>
         </nav>
+    </header>
 
-    </div>
-
-    <section class="contact-container">
+    <section class="contact-container container">
         <h2>Contact Us</h2>
         
         <!-- Contact Information -->
         <div class="contact-info">
             <h3>Contact Information</h3>
             <p><strong>Email:</strong> info@shahanjconstruction.com</p>
-            <p><strong>Phone:</strong> 9858077779</p>
+            <p><strong>Phone:</strong> 9858077779 , +977-84-420739</p>
             <p><strong>Address:</strong> Santoshi tol, Bardiya municipality - 2, Barddiya </p>
         </div>
         
@@ -101,44 +109,47 @@
         </div>
     </section>
     <section class="section-container">
-        <div class="section-header">
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">projects</h2>
-                    <li>Concept House</li>
-                    <li>Smart House</li>
-                    <li>Smart Village</li>
-                </ul>
-                
-            </div>
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">Services</h2>
-                    <li>Repair </li>
-                    <li>Construction</li>
-                    <li>other services</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">contact address</h2>
-                    <li>ph1 : 9858077779</li>
-                    <li>ph2 : </li>
-                    <li>email : shahanjcompany@gmail.com</li> 
-                </ul>
-            </div>
-            <div class="social-links">
-                <h2 style="text-decoration: underline;">Social Links</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL
-                        "><img src="images/facebookicon.png" alt="Facebook"></a>
-                    </li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
-                </ul>
+        <div class="section-header container">
+            <div class="row">
+                <div class="col-md">
+                    <ul>
+                        <h2>Projects</h2>
+                        <li>Concept House</li>
+                        <li>Smart House</li>
+                        <li>Smart Village</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul>
+                        <h2>Services</h2>
+                        <li>Repair</li>
+                        <li>Construction</li>
+                        <li>Civil Engineering</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul>
+                        <h2>Contact Address</h2> 
+                        <li>Ph1: 9858077779</li>
+                        <li>Ph2: +977-84-420739</li>
+                        <li>Email:shahanjcompany@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="social-links">
+                        <h2>Social Links</h2>
+                        <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <p>&copy; 2024 shahanj construction pvt. ltd. All rights reserved.</p>
-        
+        <p style="text-align: center;">&copy; 2024 Shahanj Construction Pvt. Ltd. All rights reserved.</p>
     </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

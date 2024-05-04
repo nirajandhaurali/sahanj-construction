@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family:cursive;
+            line-height: 2;
+            background-color: rgb(253, 253, 253);
+        }
+        /* Additional styles for slideshow */
+        #slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            height: 300px; /* Set the specific height for the slideshow */
+            width: 900px; /* Set the specific width for the slideshow */
+            margin-top: 20px; /* Add margin to create space between CEO message and slideshow */
+        }
+        
+        .slide {
+            position: absolute;
+            width: 250px;
+            height: 800px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+
+        /* Styles for CEO message */
+        #ceo-message {
+            position: relative; /* Change to relative positioning */
+            margin-top: 20px; /* Add margin to create space between header and CEO message */
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        #ceo-message img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            margin-right: 20px; /* Add margin between CEO image and text */
+        }
+
+        #ceo-message p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        /* Styles for random pictures section */
+        .random-picture-container {
+            position: relative;
+            width: 1600px; /* Adjust container width as needed */
+            height: 900px; /* Adjust container height as needed */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .random-picture {
+            flex: 0 0 auto;
+            width: 1600px; /* Adjust image width as needed */
+            height: 900px; /* Adjust image height as needed */
+            position: relative;
+        }
+
+        .random-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            position: fixed; /* Make the footer fixed */
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            display: none; /* Initially hide the footer */
+        }
+        
+
+        .section-content {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .contact-info .item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <div id="logo-name" style="display: flex; align-items: center;">
+                <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 150px; height: 150px;">
+                <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: beige; font-size: 60px; text-align: center;">
+                    Shahanj Construction Company Pvt. Ltd.
+                </h1>
+            </div>
+            
+        </header>
+        <nav style="background-color: crimson;">
+            <ul>
+                <li style="font-size: 40px; margin-left: 40px;"><a href="index.html">Home</a></li>
+                <li style="font-size: 40px;margin-left: 40px;"><a href="about.html">About us</a></li>
+                <li style="font-size: 40px;margin-left: 40px;"><a href="service.html">Our Services</a></li>
+                <li style="font-size: 40px;margin-left: 40px;"><a href="contact.html">Contact</a></li>
+                <li style="font-size: 40px;margin-left: 40px;"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+  
+    <section id="slideshow-container">
+        <div class="slide active"><img src="images/aa2ce1_8fdb2ae0e65b4646aa3b1b8e37d6d2f4~mv2.webp" alt="Slide 1"></div>
+        <div class="slide"><img src="images/aa2ce1_d71017d9e0ab41b3876d598495b45ab3~mv2.webp" alt="Slide 2"></div>
+        <div class="slide"><img src="images/cb622a05464c47d08df05deb7f5173b0.webp" alt="Slide 3"></div>
+        <div class="slide"><img src="images/f9490ca89a9b4aae961581afca3c73fd.webp" alt="Slide 4"></div>
+        <div class="slide"><img src="images/photo-1489514354504-1653aa90e34e.jpg" alt="Slide 5"></div>
+        <div class="slide"><img src="images/photo-1531834685032-c34bf0d84c77.jpg" alt="Slide 6"></div>
+        <div class="slide"><img src="images/construction.webp" alt="Slide 7"></div>
+        <div class="slide"><img src="images/construction1.webp" alt="Slide 8"></div>
+        <div class="slide"><img src="images/construction3.webp" alt="Slide 9"></div>
+        <!-- Add more slides as needed -->
+    </section>
+
+    <!-- CEO Message -->
+    <div id="ceo-message">
+        <img src="images/ceoimage.png" alt="CEO Image">
+        <p style="font-family:'Courier New', Courier, monospace">
+            Dear Valued Customers and Stakeholders, <br>
+
+            I am delighted to extend my warmest greetings to all of you on behalf of Shahanj Construction Company Pvt Ltd.
+
+            As we continue to navigate through an ever-evolving business landscape, I am proud to reaffirm our commitment to excellence, innovation, and client satisfaction. At Shahanj Construction, we believe in the transformative power of construction to shape communities, create lasting infrastructure, and drive economic growth. Our team of dedicated professionals is passionately committed to delivering exceptional projects that exceed expectations, while adhering to the highest standards of quality, safety, and sustainability.
+
+            We understand that our success is intrinsically linked to the success of our clients. Therefore, we prioritize open communication, collaboration, and transparency in all our endeavors. Whether it's constructing a new landmark building, renovating a historic structure, or providing reliable repair services, we approach each project with integrity, creativity, and a relentless pursuit of excellence.
+
+            As we look ahead to the future, we remain steadfast in our mission to be a trusted partner in building a better tomorrow. I am confident that with our unwavering dedication, innovative spirit, and commitment to excellence, we will continue to achieve new milestones and exceed expectations.
+
+            Thank you for your continued support and trust in Shahanj Construction Company Pvt Ltd. We look forward to the opportunity to serve you and contribute to the success of your projects.<br> <br>
+
+            Warm regards,<br>
+
+            Jagdish Adhakari <br>
+            CEO, Shahanj Construction Company Pvt. Ltd. <br></p>
+    </div>
+
+    <!-- Random Pictures Section -->
+    <h1 style="text-align: center;"> </h1>
+    <section>
+        <div class="random-picture-container">
+                <div class="random-picture">
+                    <img src="images/team.webp" alt="Random Picture 1">
+                    <div class="description">
+                        <p>Description of Image 1 goes here.</p>
+                    </div>
+                </div>
+                <!-- Add more random pictures with descriptions as needed -->
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+
+    <section class="section-container">
+        <div class="section-header">
+            <div>
+                <ul>
+                    <h2 style="text-decoration: underline;">projects</h2>
+                    <li>Concept House</li>
+                    <li>Smart House</li>
+                    <li>Smart Village</li>
+                </ul>
+                
+            </div>
+            <div>
+                <ul>
+                    <h2 style="text-decoration: underline;">Services</h2>
+                    <li>Repair </li>
+                    <li>Construction</li>
+                    <li>other services</li>
+                </ul>
+            </div>
+
+            <div>
+
+                <ul>
+                    <h2 style="text-decoration: underline;">contact address</h2>
+                    <li>ph1 : 9858077779</li>
+                    <li>ph2 : 9377374</li>
+                    <li>email : shahanjcompany@gmail.com</li> 
+                </ul>
+            </div>
+
+            <div class="social-links">
+                <h2 style="text-decoration: underline;">Social Links</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL
+                        "><img src="images/facebookicon.png" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 shahanj construction pvt. ltd. All rights reserved.</p>
+        
+    </section>
+
+    <script>
+        // JavaScript to change active slide
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+        }
+
+        setInterval(showSlide, 2000); // Change slide every 1.5 seconds
+
+        // JavaScript to toggle footer visibility based on scroll position
+        window.addEventListener('scroll', function() {
+            let scrollPosition = window.innerHeight + window.scrollY;
+            let documentHeight = document.body.offsetHeight;
+            if (scrollPosition >= documentHeight) {
+                document.querySelector('footer').style.display = 'block';
+            } else {
+                document.querySelector('footer').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

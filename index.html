@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: cursive;
             line-height: 2;
-            
         }
 
         /* Additional styles for slideshow */
         #slideshow-container {
+            max-width: 100%; /* Set max-width to 100% for responsiveness */
+            
             position: relative;
-            max-width: 100%;
             margin: auto;
             overflow: hidden;
-            height: 300px; /* Set the specific height for the slideshow */
+            height: 50vh; /* Set the specific height for the slideshow */
         }
+        .containerr img {
+            width: 100%;
+            height: auto; /* Set height to auto for responsiveness */
+            object-fit: cover;
+        }
+        
 
         .slide {
             position: absolute;
             width: 100%; /* Update width to 100% for responsiveness */
             height: 100%; /* Update height to 100% for responsiveness */
             opacity: 0;
+            object-fit: cover;
             transition: opacity 1s ease-in-out;
         }
 
@@ -82,16 +91,10 @@
         }
 
         .section-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             padding: 20px;
         }
 
         .section-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             margin-bottom: 20px;
         }
 
@@ -124,72 +127,40 @@
             width: 50px;
             height: 50px;
         }
-
-        @media (max-width: 768px) {
-            #slideshow-container {
-                height: 200px;
-            }
-
-            .slide {
-                height: 200px;
-            }
-
-            #ceo-message img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #slideshow-container {
-                height: 150px;
-            }
-
-            .slide {
-                height: 150px;
-            }
-
-            #ceo-message img {
-                width: 80px;
-                height: 80px;
-            }
-
-            #ceo-message p {
-                font-size: 14px;
-            }
-
-            .section-header {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .section-header div {
-                margin: 10px 0;
-            }
-        }
     </style>
 </head>
 <body>
-    <div>
-        <header>
-            <div id="logo-name" style="display: flex; align-items: center;">
-                <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 150px; height: 150px;">
-                <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: beige; font-size: 60px; text-align: center;">
-                    Shahanj Construction Company Pvt Ltd
-                </h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 50px; height: 50px;">
+            <a class="navbar-brand" href="#">Shahanj Construction</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                </ul>
             </div>
-        </header>
-        <nav style="background-color: crimson;">
-            <ul>
-                <li style="font-size: 40px; margin-left: 40px;"><a href="index.html">Home</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="about.html">About us</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="service.html">Our Services</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="contact.html">Contact</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="gallery.html">Gallery</a></li>
-            </ul>
         </nav>
-    </div>
-    <section id="slideshow-container">
+    </header>
+
+    <section id="slideshow-container" class="containerr">
         <div class="slide active"><img src="images/aa2ce1_8fdb2ae0e65b4646aa3b1b8e37d6d2f4~mv2.webp" alt="Slide 1"></div>
         <div class="slide"><img src="images/aa2ce1_d71017d9e0ab41b3876d598495b45ab3~mv2.webp" alt="Slide 2"></div>
         <div class="slide"><img src="images/cb622a05464c47d08df05deb7f5173b0.webp" alt="Slide 3"></div>
@@ -203,11 +174,10 @@
     </section>
 
     <!-- CEO Message -->
-    <div id="ceo-message">
+    <div id="ceo-message" class="container">
         <img src="images/ceoimage.png" alt="CEO Image">
         <p style="font-family:'Courier New', Courier, monospace">
             Dear Valued Customers and Stakeholders, <br>
-
             I am delighted to extend my warmest greetings to all of you on behalf of Shahanj Construction Company Pvt Ltd.
 
             As we continue to navigate through an ever-evolving business landscape, I am proud to reaffirm our commitment to excellence, innovation, and client satisfaction. At Shahanj Construction, we believe in the transformative power of construction to shape communities, create lasting infrastructure, and drive economic growth. Our team of dedicated professionals is passionately committed to delivering exceptional projects that exceed expectations, while adhering to the highest standards of quality, safety, and sustainability.
@@ -216,62 +186,66 @@
 
             As we look ahead to the future, we remain steadfast in our mission to be a trusted partner in building a better tomorrow. I am confident that with our unwavering dedication, innovative spirit, and commitment to excellence, we will continue to achieve new milestones and exceed expectations.
 
-            Thank you for your continued support and trust in Shahanj Construction Company Pvt Ltd. We look forward to the opportunity to serve you and contribute to the success of your projects.<br> <br>
-
-            Warm regards,<br>
-
-            Jagdish Adhakari <br>
-            CEO, Shahanj Construction Company Pvt. Ltd. <br>
+            Thank you for your continued support and trust in Shahanj Construction Company Pvt Ltd. We look forward to the opportunity to serve you and contribute to the success of your projects.
         </p>
     </div>
 
     <!-- Random Pictures Section -->
-    <h2 style="text-align: center;">Random Pictures</h2>
-    <section class="random-picture-container">
+    <section class="random-picture-container container">
         <div class="random-picture">
             <img src="images/team.webp" alt="Random Picture 1">
-            <div class="description">
-            </div>
         </div>
         <!-- Add more random pictures with descriptions as needed -->
     </section>
 
     <section class="section-container">
-        <div class="section-header">
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">Projects</h2>
-                    <li>Concept House</li>
-                    <li>Smart House</li>
-                    <li>Smart Village</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">Services</h2>
-                    <li>Repair </li>
-                    <li>Construction</li>
-                    <li>Other Services</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">Contact Address</h2>
-                    <li>Ph1 : 9858077779</li>
-                    <li>Ph2 : 9377374</li>
-                    <li>Email : shahanjcompany@gmail.com</li> 
-                </ul>
-            </div>
-            <div class="social-links">
-                <h2 style="text-decoration: underline;">Social Links</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL"><img src="images/facebookicon.png" alt="Facebook"></a></li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
-                </ul>
+        <div class="section-header container">
+            <div class="row">
+                <div class="col-md">
+                    <ul>
+                        <h2>Projects</h2>
+                        <li>Concept House</li>
+                        <li>Smart House</li>
+                        <li>Smart Village</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul>
+                        <h2>Services</h2>
+                        <li>Repair</li>
+                        <li>Construction</li>
+                        <li>Other Services</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul>
+                        <h2>Contact Address</h2>
+                        <li>Ph1: 9858077779</li>
+                        <li>Ph2: 9377374</li>
+                        <li>Email: shahanjcompany@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="social-links">
+                        <h2>Social Links</h2>
+                        <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <p>&copy; 2024 Shahanj Construction Pvt. Ltd. All rights reserved.</p>
     </section>
+
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <p>&copy; 2024 Shahanj Construction Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         // JavaScript to change active slide

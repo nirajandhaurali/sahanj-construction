@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family:cursive;
+            font-family: cursive;
             line-height: 2;
             background-color: rgb(253, 253, 253);
         }
+
         /* Additional styles for slideshow */
         #slideshow-container {
             position: relative;
@@ -18,64 +19,53 @@
             margin: auto;
             overflow: hidden;
             height: 300px; /* Set the specific height for the slideshow */
-            width: 900px; /* Set the specific width for the slideshow */
-            margin-top: 20px; /* Add margin to create space between CEO message and slideshow */
         }
-        
+
         .slide {
             position: absolute;
-            width: 250px;
-            height: 800px;
+            width: 100%; /* Update width to 100% for responsiveness */
+            height: 100%; /* Update height to 100% for responsiveness */
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        
+
         .slide.active {
             opacity: 1;
         }
 
         /* Styles for CEO message */
         #ceo-message {
-            position: relative; /* Change to relative positioning */
-            margin-top: 20px; /* Add margin to create space between header and CEO message */
             padding: 20px;
             background-color: #f0f0f0;
             display: flex;
             align-items: center;
+            flex-direction: column; /* Update flex direction for responsiveness */
         }
 
         #ceo-message img {
-            width: 400px;
-            height: 400px;
+            width: 150px; /* Adjust CEO image width for responsiveness */
+            height: 150px; /* Adjust CEO image height for responsiveness */
             border-radius: 50%;
-            margin-right: 20px; /* Add margin between CEO image and text */
+            margin-bottom: 20px; /* Add bottom margin for spacing */
         }
 
         #ceo-message p {
             font-size: 18px;
             font-weight: bold;
             margin: 10px;
+            text-align: center; /* Center align CEO message text */
         }
 
         /* Styles for random pictures section */
         .random-picture-container {
-            position: relative;
-            width: 1600px; /* Adjust container width as needed */
-            height: 900px; /* Adjust container height as needed */
-            overflow: hidden;
+            max-width: 100%; /* Set max-width to 100% for responsiveness */
             margin-bottom: 20px;
-        }
-
-        .random-picture {
-            flex: 0 0 auto;
-            width: 1600px; /* Adjust image width as needed */
-            height: 900px; /* Adjust image height as needed */
-            position: relative;
+            overflow: hidden;
         }
 
         .random-picture img {
             width: 100%;
-            height: 100%;
+            height: auto; /* Set height to auto for responsiveness */
             object-fit: cover;
         }
 
@@ -90,17 +80,92 @@
             padding: 10px 0;
             display: none; /* Initially hide the footer */
         }
-        
 
-        .section-content {
-            margin-bottom: 20px;
+        .section-container {
             display: flex;
             flex-direction: column;
-            flex: 1;
+            align-items: center;
+            padding: 20px;
         }
 
-        .contact-info .item {
-            margin-bottom: 10px;
+        .section-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header div {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .section-header ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section-header h2 {
+            text-decoration: underline;
+        }
+
+        .social-links ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .social-links li {
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (max-width: 768px) {
+            #slideshow-container {
+                height: 200px;
+            }
+
+            .slide {
+                height: 200px;
+            }
+
+            #ceo-message img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #slideshow-container {
+                height: 150px;
+            }
+
+            .slide {
+                height: 150px;
+            }
+
+            #ceo-message img {
+                width: 80px;
+                height: 80px;
+            }
+
+            #ceo-message p {
+                font-size: 14px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-header div {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -110,10 +175,9 @@
             <div id="logo-name" style="display: flex; align-items: center;">
                 <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 150px; height: 150px;">
                 <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: beige; font-size: 60px; text-align: center;">
-                    Shahanj Construction Company Pvt. Ltd.
+                    Shahanj Construction Company Pvt Ltd
                 </h1>
             </div>
-            
         </header>
         <nav style="background-color: crimson;">
             <ul>
@@ -125,8 +189,6 @@
             </ul>
         </nav>
     </div>
-    
-  
     <section id="slideshow-container">
         <div class="slide active"><img src="images/aa2ce1_8fdb2ae0e65b4646aa3b1b8e37d6d2f4~mv2.webp" alt="Slide 1"></div>
         <div class="slide"><img src="images/aa2ce1_d71017d9e0ab41b3876d598495b45ab3~mv2.webp" alt="Slide 2"></div>
@@ -159,74 +221,56 @@
             Warm regards,<br>
 
             Jagdish Adhakari <br>
-            CEO, Shahanj Construction Company Pvt. Ltd. <br></p>
+            CEO, Shahanj Construction Company Pvt. Ltd. <br>
+        </p>
     </div>
 
     <!-- Random Pictures Section -->
-    <h1 style="text-align: center;"> </h1>
-    <section>
-        <div class="random-picture-container">
-                <div class="random-picture">
-                    <img src="images/team.webp" alt="Random Picture 1">
-                    <div class="description">
-                        <p>Description of Image 1 goes here.</p>
-                    </div>
-                </div>
-                <!-- Add more random pictures with descriptions as needed -->
+    <h2 style="text-align: center;">Random Pictures</h2>
+    <section class="random-picture-container">
+        <div class="random-picture">
+            <img src="images/team.webp" alt="Random Picture 1">
+            <div class="description">
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <!-- Add more random pictures with descriptions as needed -->
     </section>
 
     <section class="section-container">
         <div class="section-header">
             <div>
                 <ul>
-                    <h2 style="text-decoration: underline;">projects</h2>
+                    <h2 style="text-decoration: underline;">Projects</h2>
                     <li>Concept House</li>
                     <li>Smart House</li>
                     <li>Smart Village</li>
                 </ul>
-                
             </div>
             <div>
                 <ul>
                     <h2 style="text-decoration: underline;">Services</h2>
                     <li>Repair </li>
                     <li>Construction</li>
-                    <li>other services</li>
+                    <li>Other Services</li>
                 </ul>
             </div>
-
             <div>
-
                 <ul>
-                    <h2 style="text-decoration: underline;">contact address</h2>
-                    <li>ph1 : 9858077779</li>
-                    <li>ph2 : 9377374</li>
-                    <li>email : shahanjcompany@gmail.com</li> 
+                    <h2 style="text-decoration: underline;">Contact Address</h2>
+                    <li>Ph1 : 9858077779</li>
+                    <li>Ph2 : 9377374</li>
+                    <li>Email : shahanjcompany@gmail.com</li> 
                 </ul>
             </div>
-
             <div class="social-links">
                 <h2 style="text-decoration: underline;">Social Links</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL
-                        "><img src="images/facebookicon.png" alt="Facebook"></a>
-                    </li>
-
+                    <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL"><img src="images/facebookicon.png" alt="Facebook"></a></li>
                     <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
                 </ul>
             </div>
         </div>
-        <p>&copy; 2024 shahanj construction pvt. ltd. All rights reserved.</p>
-        
+        <p>&copy; 2024 Shahanj Construction Pvt. Ltd. All rights reserved.</p>
     </section>
 
     <script>

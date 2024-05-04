@@ -5,25 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            font-family:cursive;
-            line-height: 2;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            text-align: center;
-        }
+
+        
+
         .service {
             cursor: pointer;
             margin-bottom: 20px;
             background-color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
         .service:hover {
@@ -31,111 +24,148 @@
         }
         .service h2 {
             margin-top: 0;
+            font-size: 24px;
+            color: #333;
         }
         .service-description {
-            display: none;
-            margin-left: 20px;
+            margin-top: 10px;
+            color: #555;
+        }
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .service {
+                padding: 15px;
+            }
+            .service h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div>
-        <header>
-            <div id="logo-name" style="display: flex; align-items: center;">
-                <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 150px; height: 150px;">
-                <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: beige; font-size: 60px; text-align: center;">
-                    Shahanj Construction Company Pvt Ltd
-                </h1>
-            </div>
-            
-        </header>
-        <nav style="background-color: crimson;">
-            <ul>
-                <li style="font-size: 40px; margin-left: 40px;"><a href="index.html">Home</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="about.html">About us</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="service.html">Our Services</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="contact.html">Contact</a></li>
-                <li style="font-size: 40px;margin-left: 40px;"><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <h1>Our Services</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 70px; height: 70px;">
+            <a style="font-size: 40px;" class="navbar-brand" href="index.html">Shahanj Construction Pvt. Ltd. </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="service" onclick="toggleService(1)">
-            <h2>Residential Construction</h2>
-            <div class="service-description" id="service1">
-                <p>Building new homes or remodeling existing ones to meet the needs and preferences of homeowners. This includes everything from single-family houses to multi-unit residential complexes.</p>
-            </div>
-        </div>
-
-        <div class="service" onclick="toggleService(2)">
-            <h2>Commercial Construction</h2>
-            <div class="service-description" id="service2">
-                <p>Constructing buildings and structures for commercial purposes, such as offices, retail stores, restaurants, hotels, and industrial facilities. These projects often involve unique design and functionality requirements.</p>
-            </div>
-        </div>
-
-        <div class="service" onclick="toggleService(3)">
-            <h2>Renovation and Restoration</h2>
-            <div class="service-description" id="service3">
-                <p>Renovating and restoring old or damaged buildings to improve their functionality, aesthetics, and safety. This can include structural repairs, interior remodeling, and exterior renovations to enhance curb appeal.</p>
-            </div>
-        </div>
-        <div class="service" onclick="toggleService(4)">
-            <h2>Civil Engineering</h2>
-            <div class="service-description" id="service4">
-                <p>Providing civil engineering services for infrastructure projects like roads, bridges, dams, airports, and water treatment plants. This involves designing and constructing essential public works to support communities and enhance quality of life.</p>
-            </div>
-        </div>
-        <div class="service" onclick="toggleService(5)">
-            <h2>Green Building and Sustainability</h2>
-            <div class="service-description" id="service5">
-                <p> Incorporating sustainable building practices and environmentally friendly materials into construction projects to minimize environmental impact and maximize energy efficiency. This includes implementing renewable energy systems, using recycled materials, and designing buildings for optimal energy performance.</p>
-            </div>
-        </div>
-    </div>
-    <section class="section-container">
-        <div class="section-header">
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">projects</h2>
-                    <li>Concept House</li>
-                    <li>Smart House</li>
-                    <li>Smart Village</li>
-                </ul>
-                
-            </div>
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">Services</h2>
-                    <li>Repair </li>
-                    <li>Construction</li>
-                    <li>other services</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <h2 style="text-decoration: underline;">contact address</h2>
-                    <li>ph1 : 9858077779</li>
-                    <li>ph2 : 9377374</li>
-                    <li>email : shahanjcompany@gmail.com</li> 
-                </ul>
-            </div>
-            <div class="social-links">
-                <h2 style="text-decoration: underline;">Social Links</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL
-                        "><img src="images/facebookicon.png" alt="Facebook"></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="service.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
                 </ul>
             </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center">Our Services</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service" onclick="toggleService(1)">
+                    <h2>Residential Construction</h2>
+                    <div class="service-description" id="service1">
+                        <p>Building new homes or remodeling existing ones to meet the needs and preferences of homeowners. This includes everything from single-family houses to multi-unit residential complexes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service" onclick="toggleService(2)">
+                    <h2>Commercial Construction</h2>
+                    <div class="service-description" id="service2">
+                        <p>Constructing buildings and structures for commercial purposes, such as offices, retail stores, restaurants, hotels, and industrial facilities. These projects often involve unique design and functionality requirements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service" onclick="toggleService(3)">
+                    <h2>Renovation and Restoration</h2>
+                    <div class="service-description" id="service3">
+                        <p>Renovating and restoring old or damaged buildings to improve their functionality, aesthetics, and safety. This can include structural repairs, interior remodeling, and exterior renovations to enhance curb appeal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service" onclick="toggleService(4)">
+                    <h2>Civil Engineering</h2>
+                    <div class="service-description" id="service4">
+                        <p>Providing civil engineering services for infrastructure projects like roads, bridges, dams, airports, and water treatment plants. This involves designing and constructing essential public works to support communities and enhance quality of life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service" onclick="toggleService(5)">
+                    <h2>Green Building and Sustainability</h2>
+                    <div class="service-description" id="service5">
+                        <p>Incorporating sustainable building practices and environmentally friendly materials into construction projects to minimize environmental impact and maximize energy efficiency. This includes implementing renewable energy systems, using recycled materials, and designing buildings for optimal energy performance.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2024 shahanj construction pvt. ltd. All rights reserved.</p>
-        
+    </div>
+
+    <section class="section-container">
+        <div class="section-header container">
+            <div class="row">
+                <div class="col-md">
+                    <ul>
+                        <h2>Projects</h2>
+                        <li>Concept House</li>
+                        <li>Smart House</li>
+                        <li>Smart Village</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul>
+                        <h2>Services</h2>
+                        <li>Repair</li>
+                        <li>Construction</li>
+                        <li>Civil Engineering</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul>
+                        <h2>Contact Address</h2> 
+                        <li>Ph1: 9858077779</li>
+                        <li>Ph2: +977-84-420739</li>
+                        <li>Email:shahanjcompany@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <ul class="social-links">
+                        <h2>Social Links</h2>
+                        <li><a href="https://www.facebook.com/profile.php?id=100010866182011&mibextid=ZbWKwL"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;">&copy; 2024 Shahanj Construction Pvt. Ltd. All rights reserved.</p>
     </section>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         function toggleService(serviceNumber) {

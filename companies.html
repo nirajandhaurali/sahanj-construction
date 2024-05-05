@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        
+
+        .service {
+            cursor: pointer;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .companies:hover {
+            background-color: #e7e7e1;
+        }
+        .service h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .service-description {
+            margin-top: 10px;
+            color: #555;
+        }
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .service {
+                padding: 15px;
+            }
+            .service h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="images/logo.png" alt="logo Image" style="margin-right: 20px; border-radius: 50%; width: 70px; height: 70px;">
+            <a style="font-size: 40px;" class="navbar-brand" href="index.html">Shahanj Group of Companies</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="service.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 30px;" class="nav-link" href="companies.html">Our Companies</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center"  style="color: coral; font-size: 50px; margin-bottom: 20px;">Our Companies</h1>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="companies" onclick="toggleService(3)">
+                    <h2 style="color: blue;">Shahanj Construction Company Pvt. Ltd</h2>
+                    <div class="service-description" id="service3">
+                        <p>
+                            Shahanj Construction Company Pvt. Ltd., established in 1982 A.D., stands as a premier construction enterprise renowned for its commitment to excellence and innovation in the construction sector. 
+                            With decades of experience, Shahanj Construction has established itself as a trusted name, delivering high-quality construction projects across various domains. From residential and commercial
+                            buildings to infrastructure projects, Shahanj Construction's dedication to superior craftsmanship, attention to detail, and adherence to timelines have earned it a reputation for reliability and integrity in the industry.
+                            With a focus on customer satisfaction and sustainable practices, Shahanj Construction continues to lead the way in shaping the landscape of construction projects, setting benchmarks for quality and efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="companies" onclick="toggleService(4)">
+                    <h2 style="color: blue;" >Shahanj Agencies Pvt. Ltd </h2>
+                    <div class="service-description" id="service4">
+                        <p>
+                            Shahanj Agencies Pvt. Ltd, a prominent entity within the Shahanj Group Companies, 
+                            stands as a leading enterprise engaged in import, export, and local trading activities.
+                            Renowned for its commitment to excellence and customer satisfaction, Shahanj Agencies excels
+                            in facilitating the movement of goods across international borders, leveraging its expertise in 
+                            global trade regulations and logistics. With a diverse portfolio of products and services, the company 
+                            serves as a reliable partner for businesses seeking seamless access to international markets, while also 
+                            catering to local trading needs. Through its robust network and strategic partnerships, Shahanj 
+                            Agencies continues to drive innovation and efficiency in the realm of import, export, and local 
+                            trading, positioning itself as a trusted industry leader
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="companies" onclick="toggleService(5)">
+                    <h2 style="color: blue;" >Shahanj Human Resources Pvt. Ltd</h2>
+                    <div class="service-description" id="service5">
+                        <p>
+
+                            Shahanj Human Resources Pvt. Ltd, a key component of the Shahanj Group of Companies, 
+                            is a leading provider of overseas manpower recruitment services. Specializing in sourcing
+                             both skilled and unskilled labor, the company facilitates placements across diverse industries,
+                              meeting the staffing requirements of international enterprises. Committed to excellence and integrity, 
+                              Shahanj Human Resources ensures the seamless recruitment and deployment of qualified personnel, 
+                              guided by stringent standards and regulations. Leveraging its extensive network and industry expertise,
+                               the agency serves as a trusted partner for employers seeking workforce solutions and individuals pursuing 
+                               rewarding career opportunities abroad. With a focus on nurturing mutually beneficial relationships, Shahanj
+                                Human Resources maintains its reputation as a reliable and ethical recruitment agency, contributing to the 
+                                global workforce ecosystem with professionalism and transparency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="companies" onclick="toggleService(5)">
+                    <h2 style="color: blue;" >Adhikari Money Transfer</h2>
+                    <div class="service-description" id="service5">
+                        <p>
+
+                            
+                            Adhikari Money Transfer is a trusted financial service provider that facilitates secure and efficient money transfers for individuals and businesses. With a focus on reliability and convenience, Adhikari Money Transfer offers a seamless platform for sending and receiving funds domestically and internationally.
+                            Whether it's remittances for families, payments for goods and services, or business transactions, Adhikari Money Transfer ensures swift and hassle-free transactions, supported by a robust network of partners and cutting-edge technology. With a commitment to customer satisfaction and financial inclusion, 
+                            Adhikari Money Transfer strives to be the preferred choice for safe and convenient money transfer solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <section class="section-container">
+        <div class="section-header container">
+            <div class="row">
+            
+                <div class="col-md">
+                    <ul>
+                        <h2>Contact Address</h2> 
+                        <li>Ph1: 9858077779</li>
+                        <li>Ph2: +977-84-420739</li>
+                        <li>Email:shahanjcompany@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="social-links">
+                        <h2 style="margin-bottom: 10px;">Social Links</h2>
+                        <li class="social-icon"><a href="https://www.facebook.com/profile.php?id=100063557052895&mibextid=ZbWKwL"><img src="images/facebookicon.png" alt="Facebook"></a></li>
+                        <li class="social-icon"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahanjcompany@gmail.com"><img src="images/emailicon.png" alt="Email"></a></li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+        <p style="text-align: center;">&copy; 2024 Shahanj Construction Pvt. Ltd. All rights reserved.</p>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleService(serviceNumber) {
+            var description = document.getElementById('service' + serviceNumber);
+            description.style.display = (description.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

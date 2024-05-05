@@ -35,6 +35,16 @@ header {
     text-decoration: underline;
 }
 
+.social-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon {
+    list-style: none;
+}
+
+
 .social-links ul {
     display: flex;
     justify-content: center;
@@ -45,6 +55,7 @@ header {
 .social-links li {
     margin: 0 10px;
 }
+
 
 .social-links img {
     width: 50px;
